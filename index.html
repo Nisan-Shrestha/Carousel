@@ -1,13 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + TS</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/d0900a6394.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="inputs">
+      <label for="transition-time"
+        >Transition Time (in ms)<input
+          type="number"
+          name="transition-time"
+          id="transition-time"
+          value="300"
+          min="0"
+        />
+      </label>
+      <label for="hold-time"
+        >Hold Time (in ms)
+
+        <input type="number" value="2500" min="100" name="hold-time" id="hold-time" />
+      </label>
+    </div>
+    <div class="carousel-container carousel-1">
+      <div class="carousel-image-wrapper">
+        <img src="public/pic1.png" alt="Image" class="carousel-image" />
+        <img src="public/pic2.png" alt="Image" class="carousel-image" />
+        <img src="public/pic3.png" alt="Image" class="carousel-image" />
+        <img src="public/pic4.png" alt="Image" class="carousel-image" />
+        <img src="public/pic5.png" alt="Image" class="carousel-image" />
+      </div>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <div class="carousel-container carousel-2">
+      <div class="carousel-image-wrapper">
+        <img src="public/pic1.png" alt="Image" class="carousel-image" />
+        <img src="public/pic2.png" alt="Image" class="carousel-image" />
+        <img src="public/pic3.png" alt="Image" class="carousel-image" />
+      </div>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <div class="carousel-container carousel-3">
+      <div class="carousel-image-wrapper">
+        <img src="public/pic1.png" alt="Image" class="carousel-image" />
+        <img src="public/pic2.png" alt="Image" class="carousel-image" />
+        <img src="public/pic3.png" alt="Image" class="carousel-image" />
+        <img src="public/pic4.png" alt="Image" class="carousel-image" />
+        <img src="public/pic5.png" alt="Image" class="carousel-image" />
+      </div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
