@@ -13,7 +13,7 @@
   <body>
     <div class="inputs">
       <label for="transition-time"
-        >Transition Time (in ms)<input
+        >Transition Time<input
           type="number"
           name="transition-time"
           id="transition-time"
@@ -21,15 +21,16 @@
           min="0"
         />
       </label>
-      <label for="hold-time"
-        >Hold Time (in ms)
 
+      <label for="hold-time"
+        >Hold Time
         <input
-          type="number"
+          type="range"
           value="2500"
           min="100"
           name="hold-time"
           id="hold-time"
+          max="10000"
         />
       </label>
     </div>
@@ -60,7 +61,6 @@
         <div class="carousel-image-wrapper">
           <img src="public/pic1.png" alt="Image" class="carousel-image" />
           <img src="public/pic2.png" alt="Image" class="carousel-image" />
-          <img src="public/pic3.png" alt="Image" class="carousel-image" />
           <img src="public/pic4.png" alt="Image" class="carousel-image" />
           <img src="public/pic5.png" alt="Image" class="carousel-image" />
         </div>

@@ -199,7 +199,11 @@ let alerted = false;
 function updateCarousels() {
   transitionTime = parseInt(TransTimeField.value);
   holdTime = parseInt(HoldTimeField.value);
-  if(transitionTime > holdTime && !alerted){
+  // transText.innerText = `${transitionTime}ms`;
+  holdText.innerText = `${holdTime}ms`;
+  // console.log();
+  // holdText?.nodeValue = `${holdTime}ms`;
+  if (transitionTime > holdTime && !alerted) {
     alert("Please Fix Transition Time to be less than Hold Time");
     alerted = true;
     return;
@@ -208,6 +212,7 @@ function updateCarousels() {
   for (let carousel of carousels) {
     carousel.transitionAnimateLength = transitionTime;
     carousel.transitionHoldTime = holdTime;
+
     clearInterval(carousel.automaticScroll);
     carousel.setupAutoScroll();
     // carousel.scrollTo(carousel.currIndex + 1);
@@ -217,6 +222,14 @@ function updateCarousels() {
     carousel.transitionProgress = 0;
   }
 }
+
+let holdText: HTMLElement = document.createElement("span") as HTMLElement;
+holdText.innerText = `${holdTime}ms`;
+HoldTimeField.parentElement?.appendChild(holdText);
+
+let transText: HTMLElement = document.createElement("span") as HTMLElement;
+transText.innerText = `ms`;
+TransTimeField.parentElement?.appendChild(transText);
 
 let carouselsContainers = document.getElementsByClassName("carousel-container");
 let carousels: ImageCarousel[] = [];
