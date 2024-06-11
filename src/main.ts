@@ -1,8 +1,3 @@
-enum Direction {
-  LEFT = -1,
-  RIGHT = 1,
-}
-
 class ImageCarousel {
   transitionHoldTime: number;
   transitionAnimateLength: number;
